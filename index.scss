@@ -1,0 +1,65 @@
+@import "variable";
+
+%green-border {
+    // border: solid 1px black; <--untuk gabungin dalam satu baris
+    border-style: solid;
+    border-color: green;
+    border-width: 5px;
+    border-radius: 3%;
+    display: flex;
+}
+%orange-border {
+    border-style: solid;
+    border-color: orange;
+    border-width: 5px;
+    border-radius: 3%;
+    height: 500px;
+
+}
+%submit-button {
+    border-style: solid;
+    border-width: 5px;
+    border-radius: 5%;
+}
+
+div {
+    display: flex;
+    justify-content: center;
+}
+h1 {
+    font-size: $larger;
+    text-align: center;
+}
+
+.green-border {
+    font-size: $large;
+    @extend %green-border;
+    margin: 10px;
+}
+
+.submit-button {
+    font-size: $large;
+    @extend %submit-button;
+    margin: 10px;
+}
+
+.submit-button:hover {
+    background-color: $blue-color;
+}
+
+.orange-border {
+    font-size: $large;
+    @extend %orange-border;
+}
+
+li {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 40px;
+}
+
+section {
+    width: 480px;
+    margin: 0 auto;
+}
